@@ -13,13 +13,13 @@ public class Personas {
 
 
 	//contructor por defecto
-	Personas(){
+	public Personas(){
 		 }
 	 
 	 
 	
 	//contructor parametrizado
-	Personas (int id, String nombre, String telefono ) {
+	public Personas (int id, String nombre, String telefono ) {
 		 	this.id = id;
 		 	this.nombre = nombre;
 			this.telefono = telefono;

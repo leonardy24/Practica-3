@@ -35,6 +35,7 @@ public class ConsolaBanco {
 			System.out.println("3. Obtención de un Gestor");
 			System.out.println("4. Ver todos Gestores");
 			System.out.println("5. Actualiza Gestor");
+			System.out.println("7. Crear cliente");
 			System.out.println("13. obtener un mensajes");
 			System.out.println("14. obteccion de todos los mensajes");
 			System.out.println("15. envio de mensaje");
@@ -164,6 +165,7 @@ public class ConsolaBanco {
 				});
 				break;
 			case 5:
+				//actualizando un gestor
 				System.out.println("Actualiza el ID del gestor:");
 				int actualizaGestorId = keyboard.nextInt();
 				//g1.actualizarPersona(actualizaGestorId);*/
@@ -189,8 +191,39 @@ public class ConsolaBanco {
 				
 				break;
 			case 7:
-				//inserccion de un clinet
+				//inserccion de un cliente
+				System.out.println("CREANDO UN CLIENTE :");
+
+				System.out.println("--------------------------------------------");
+
+				System.out.println("ID DEL CLIENTE");
+
+				int idNuevoCliente = keyboard.nextInt();
+
+				System.out.println("--------------------------------------------");
+
+				System.out.println("NOMBRE DEL CLIENTE");
+
+				String nombreCliente = keyboard.next();
+
+				System.out.println("--------------------------------------------");
+
+				System.out.println("NUMERO DE TELEFONO DEL CLIENTE");
+
+				String numeroTlfnCliente = keyboard.next();
+
+				System.out.println("--------------------------------------------");
+
 				
+
+				Cliente cliente1 = new Cliente(idNuevoCliente,nombreCliente,numeroTlfnCliente);
+				
+				listasClientes.put(cliente1.getId(), cliente1);
+
+				System.out.println("SE HA CREADO UN NUEVO CLIENTE");
+
+				System.out.println("--------------------------------------------");
+
 				
 				break;
 			case 8:

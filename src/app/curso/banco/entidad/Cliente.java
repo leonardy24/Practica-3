@@ -4,7 +4,9 @@ import java.util.HashMap;
 
 public class 	Cliente extends Personas {
 
-	
+	private int id ;
+	private String nombre;
+	private String telefono;
 	private float totalDinero;
 	private float agregarDinero;
 	private float retirarDinero;
@@ -27,6 +29,18 @@ public class 	Cliente extends Personas {
 		this.totalDinero = totalDinero;
 		this.cuentas =  new HashMap<>();
 	}
+	
+	public Cliente(int id, String nombre, String telefono ) {
+	 	this.id = id;
+	 	this.nombre = nombre;
+	 	this.telefono = telefono;
+	};
+	
+	/*public Cliente (int id, String nombre, String telefono) {
+		super();
+	};*/
+	
+	
 
 	//funcion agregar dinero
 	public float agregarDinero(float agregarDinero) {
