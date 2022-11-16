@@ -34,6 +34,14 @@ public class Personas {
 		
 	}
 	
+	public void mostrar() {
+		System.out.println("Id:"+this.id);
+		System.out.println("Nombre:"+this.nombre);
+		System.out.println("--------------------------------------------");
+
+	}
+	
+	
 	public	int actualizarPersona(int nuevoId) {
 		this.nuevoId = nuevoId;
 		return nuevoId;

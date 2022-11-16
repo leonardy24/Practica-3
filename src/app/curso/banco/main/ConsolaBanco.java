@@ -4,12 +4,13 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import app.curso.banco.util.utiles;
+
 import app.curso.banco.entidad.*;
 
 public class ConsolaBanco {
 
+	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
-
 		HashMap<Integer, Gestor> listasGestores = new HashMap<>();
 
 		HashMap<Integer, Cliente> listasClientes = new HashMap<>();
@@ -17,7 +18,7 @@ public class ConsolaBanco {
 		HashMap<Integer, Mensaje > mensajes = new HashMap<>();
 
 		
-		//commitNUEVO1
+		//commitenclases
 		Scanner keyboard = new Scanner(System.in);
 		
 		Gestor g1 = null;
@@ -27,6 +28,8 @@ public class ConsolaBanco {
 		//Mensaje m1= null;
 		
 		
+	
+		
 		int menuSeleccionado = -1;
 
 		do {
@@ -35,6 +38,7 @@ public class ConsolaBanco {
 			System.out.println("3. Obtención de un Gestor");
 			System.out.println("4. Ver todos Gestores");
 			System.out.println("5. Actualiza Gestor");
+			System.out.println("6. Eliminar Gestor");
 			System.out.println("7. Crear cliente");
 			System.out.println("13. obtener un mensajes");
 			System.out.println("14. obteccion de todos los mensajes");
@@ -84,7 +88,9 @@ public class ConsolaBanco {
 				System.out.println("SE HA CREADO UN NUEVO GESTOR");
 
 				System.out.println("--------------------------------------------");
-
+				
+				
+			
 				break;
 			
 			case 2:
@@ -100,22 +106,23 @@ public class ConsolaBanco {
 				
 				int idOficinaLlamado = 0;
 				
-				for( i = 0; i < 10 ; i++) {
-					
-					
-					System.out.println("Id del Gestor :"+ " " + i);
-
+				for( i = 1; i < 10 ; i++) {
 					
 					nombreLlamado = utiles.nombreAleatorio();
 					
 					//int idLlamado = utiles.idAleatorio();
 					
-					telefonoLlamado = utiles.telefonoAleatorio();
+						
 					
-					
-					 idOficinaLlamado = utiles.idOficinaAleatorio();
-					
-					
+					 System.out.println("Id del Gestor :"+ " " + i);
+
+						System.out.println("Nombre:"+ " " + nombreLlamado);
+						
+						telefonoLlamado = utiles.telefonoAleatorio();
+
+						 idOficinaLlamado = utiles.idOficinaAleatorio();
+
+						
 						Gestor1 = new Gestor (i, nombreLlamado, telefonoLlamado,idOficinaLlamado);
 						
 						listasGestores.put(Gestor1.getId(), Gestor1);
@@ -131,15 +138,17 @@ public class ConsolaBanco {
 				break;
 			// Obteniendo un gestor
 			case 3:
+				System.out.println("--------------------------------------------");
 
 				listasGestores.forEach((id, gestor) -> {
-					gestor.mostrarInfo();
+					gestor.mostrar();
 
 				});
-				
+				System.out.println("--------------------------------------------");
+
 				System.out.println("coloca el numero id para obtener mas informacion de un gestor:");
 				
-				//System.out.println("--------------------------------------------");
+				System.out.println("--------------------------------------------");
 			
 				
 				
@@ -159,10 +168,21 @@ public class ConsolaBanco {
 				
 				System.out.println("--------------------------------------------");
 			
-				listasGestores.forEach((id, gestor) -> {
-					gestor.mostrarInfo();
+				if(g1!=null) {
+					listasGestores.forEach((id, gestor) -> {
+						gestor.mostrarInfo();
 
-				});
+					});
+				}else {
+					System.out.println("NO EXISTEN GESTORES");
+
+				}
+				
+				
+
+				
+				
+				
 				break;
 			case 5:
 				//actualizando un gestor
@@ -184,8 +204,19 @@ public class ConsolaBanco {
 				
 				break;
 			case 6:	
-				
 				//eliminacionde un gestor
+				System.out.println("ELIMINANDO GESTOR");
+				System.out.println("INGRESE EL NUMERO DE ID QUE DESEA ELIMINAR:");
+				int idEliminado= keyboard.nextInt();
+				
+				if(g1!=null ) {
+					listasGestores.remove(idEliminado);
+					System.out.println("El GESTOR SE HA ELIMINADO");
+
+				}else {
+					System.out.println("EL GESTOR NO EXISTE");
+
+				}
 				
 				
 				
@@ -216,9 +247,9 @@ public class ConsolaBanco {
 
 				
 
-				Cliente cliente1 = new Cliente(idNuevoCliente,nombreCliente,numeroTlfnCliente);
+				c1 = new Cliente(idNuevoCliente,nombreCliente,numeroTlfnCliente);
 				
-				listasClientes.put(cliente1.getId(), cliente1);
+				listasClientes.put(c1.getId(), c1);
 
 				System.out.println("SE HA CREADO UN NUEVO CLIENTE");
 

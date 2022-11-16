@@ -27,20 +27,20 @@ public class utiles {
 		
 		
 		
-		String nombreCompleto = "Nombre :" + nombreAleatorio ;
+		//String nombreCompleto = "Nombre :" + nombreAleatorio ;
 		
-		String apellidoCompleto = "Apellido :" + apellidoAleatorios;
+	//	String apellidoCompleto = "Apellido :" + apellidoAleatorios;
 		
 		
 		
-		System.out.println(nombreCompleto);
+	//	System.out.println(nombreAleatorio);
 		
-		System.out.println(apellidoCompleto);
+	//	System.out.println(apellidoAleatorios);
 		
 		
 
 
-		return nombreCompleto + apellidoCompleto;
+		return nombreAleatorio +" "+ apellidoAleatorios;
 		}	
 		
 		public static final int[] IDOFICINA = {100,102,103,104,105,106,107,108 };

@@ -19,6 +19,14 @@ public class Gestor extends Personas {
 
 	
 	}
+	
+	public void mostrar() {
+		super.mostrar();
+	}
+	
+	
+	
+	
 
 	public void actualizarPersona() {
 		super.actualizarPersona(nuevoId);
