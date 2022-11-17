@@ -70,7 +70,7 @@ public class utiles {
 				
 			String tlfnCompleto = "Telefono :" + tlfnAleatorio;
 			
-			System.out.println(tlfnAleatorio);
+			//System.out.println(tlfnCompleto);
 			
 			return tlfnAleatorio;
 		}

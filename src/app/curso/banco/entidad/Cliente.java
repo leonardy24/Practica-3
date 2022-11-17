@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 public class 	Cliente extends Personas {
 
-	private int id ;
-	private String nombre;
-	private String telefono;
-	private float totalDinero;
+//	private int id ;
+	//private String nombre;
+	//private String telefono;
+	private int totalDinero;
 	private float agregarDinero;
 	private float retirarDinero;
 	private HashMap<String, Float> cuentas;
@@ -22,19 +22,23 @@ public class 	Cliente extends Personas {
 	
 	}
 	
-	
-	
-	public Cliente( int id, String nombre, String telefono, float totalDinero) {
-		super(id,  nombre, telefono);
-		this.totalDinero = totalDinero;
-		this.cuentas =  new HashMap<>();
+	public void mostrar() {
+		super.mostrar();
 	}
 	
-	public Cliente(int id, String nombre, String telefono ) {
+	
+	
+	public Cliente( int id, String nombre, String telefono, int totalDinero) {
+		super(id,  nombre, telefono);
+		this.totalDinero = totalDinero;
+		//this.cuentas =  new HashMap<>();
+	}
+	
+	/*public Cliente(int id, String nombre, String telefono) {
 	 	this.id = id;
 	 	this.nombre = nombre;
 	 	this.telefono = telefono;
-	};
+	};*/
 	
 	/*public Cliente (int id, String nombre, String telefono) {
 		super();
@@ -130,7 +134,7 @@ public class 	Cliente extends Personas {
 		return this.totalDinero;
 	}
 	
-	public  void  setTotalDinero(float totalDinero) {
+	public  void  setTotalDinero(int totalDinero) {
 		this.totalDinero = totalDinero;
 	}
 	

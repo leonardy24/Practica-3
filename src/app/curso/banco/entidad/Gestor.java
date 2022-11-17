@@ -15,7 +15,7 @@ public class Gestor extends Personas {
 	public void mostrarInfo() {
 		super.mostrarInfo();
 		System.out.println("Id Oficina :" + idOficina1 );
-		System.out.println("--------------------------------------------");
+		//System.out.println("--------------------------------------------");
 
 	
 	}
