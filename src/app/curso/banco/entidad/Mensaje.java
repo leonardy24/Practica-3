@@ -44,8 +44,9 @@ public class Mensaje {
 	
 	public void mostrarInfoUnitario() {
 		System.out.println("ID DE MENSAJE :" + this.id );
-		System.out.println("ID EMISOR :" + this.idEmisor );
-		System.out.println("ID RECEPTOR :" + this.idReceptor );
+		System.out.println("MENSAJE :" + this.textoMensaje );
+		System.out.println("-----------------------------------");
+
 	};
 	
 	

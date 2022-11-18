@@ -92,6 +92,25 @@ public class utiles {
 			return idMensajeCompleto;
 		}
 		
+		//GENERANDO ID TRANSFERNEICA
+	public static final int[] IDTRANSFERENCIA = {100,102,103,104,105,106,107,108,109,110 };
+		
+		public static int idTransferencia() {
+			
+			Random random = new Random();
+			
+			int indexIdTransferencia = random.nextInt(IDTRANSFERENCIA.length);
+			int idDeTransferencia = IDTRANSFERENCIA[indexIdTransferencia];
+				
+			int idTransferenciaCompleto = idDeTransferencia;
+			
+			
+			
+			return idTransferenciaCompleto;
+		}
+		
+		
+		
 	}
 
 
