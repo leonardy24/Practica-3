@@ -29,7 +29,7 @@ public class Transferencia extends Mensaje{
 	
 	public void mostrarInfoUnitarioTra() {
 		System.out.println("ID DE TRANSFERENCIA :" + this.id );
-		System.out.println("DINERO:" + this.textoMensaje );
+		System.out.println(":" + this.dinero );
 		System.out.println("-----------------------------------");
 
 	};

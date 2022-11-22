@@ -19,7 +19,8 @@ public class 	Cliente extends Personas {
 	public void mostrarInfo() {
 		super.mostrarInfo();
 		System.out.println("total dinero:" + this.totalDinero + "€" );
-	
+		System.out.println("---------------------------------");
+
 	}
 	
 	public void mostrar() {
